@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        canFire = true;
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && canFire)
         {
             Instantiate(bullet, bulletTf.position, quaternion.identity);
+            canFire = false;
         }
     }
 }
