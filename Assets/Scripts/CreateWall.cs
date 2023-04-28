@@ -57,13 +57,10 @@ public class CreateWall : MonoBehaviour
             _buildTimer += Time.deltaTime;
             if (_buildTimer < 0.25f)
             {
-                if (timeBetweenBuild / 2f == 0)
+                if (timeBetweenBuild / 5f == 0)
                 {
                     Instantiate(wall, wallTf.position, quaternion.identity);
                 }
-                
-                
-                //InvokeRepeating("InstantiateWall", 0f, 0.1f);
             }
             else
             {
@@ -77,10 +74,4 @@ public class CreateWall : MonoBehaviour
             blueprint.GetComponent<Animator>().SetTrigger("!CanBuild_t");
         }
     }
-    /*
-    private void InstantiateWall()
-    {
-        Instantiate(wall, wallTf.position, quaternion.identity);
-    }
-    */
 }
