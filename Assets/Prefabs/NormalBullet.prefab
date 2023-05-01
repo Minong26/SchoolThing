@@ -178,8 +178,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9099679933318602422}
   - component: {fileID: 9099679933318602421}
-  - component: {fileID: 9099679933318602423}
   - component: {fileID: 4913645398864990897}
+  - component: {fileID: 9099679933318602423}
   m_Layer: 0
   m_Name: NormalBullet
   m_TagString: Bullet
@@ -219,25 +219,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &9099679933318602423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9099679933318602416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b60a0d4ffa00014da5db6330bc2b2c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 10
 --- !u!61 &4913645398864990897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,7 +235,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00007850677, y: 0.0012904406}
@@ -264,3 +251,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19975866, y: 0.5018827}
   m_EdgeRadius: 0
+--- !u!114 &9099679933318602423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9099679933318602416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b60a0d4ffa00014da5db6330bc2b2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 10

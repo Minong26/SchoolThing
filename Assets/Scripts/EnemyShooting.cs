@@ -7,7 +7,6 @@ public class EnemyShooting : MonoBehaviour
 {
     private Vector3 _playerPos;
     private float _timer;
-    private float _fireTime;
     public GameObject bullet;
     public Transform bulletTf;
     public bool canFire;
@@ -15,7 +14,7 @@ public class EnemyShooting : MonoBehaviour
     
     void Start()
     {
-        canFire = true;
+        canFire = false;
     }
 
     // Update is called once per frame
@@ -45,16 +44,8 @@ public class EnemyShooting : MonoBehaviour
         }
         if (canFire)
         {
-            _fireTime += Time.deltaTime;
-            if (_fireTime < 0.1f)
-            {
-                Instantiate(bullet, bulletTf.position, quaternion.identity);
-            }
-            else
-            {
-                _fireTime = 0;
-                canFire = false;
-            }
+            Instantiate(bullet, bulletTf.position, quaternion.identity);
+            canFire = false;
         }
     }
 }
