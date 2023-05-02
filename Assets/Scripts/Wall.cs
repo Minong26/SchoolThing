@@ -30,12 +30,11 @@ public class Wall : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.transform.CompareTag("Bullet"))
+        if (other.transform.CompareTag("Bullet"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
