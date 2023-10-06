@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -12,7 +10,7 @@ public class Shooting : MonoBehaviour
     public Transform bulletTf;
     public bool canFire;
     public float timeBetweenFiring;
-    // Start is called before the first frame update
+
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

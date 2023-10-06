@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +28,7 @@ public class PlayerHp : MonoBehaviour
                 textHp.text = $"HP:{currentHp}";
                 Destroy(collision.gameObject);
             }
-            else
+            else if (currentHp == 0)
             {
                 gameObject.GetComponent<Animator>().SetTrigger("Died_t");
                 Debug.Log("You Died");
